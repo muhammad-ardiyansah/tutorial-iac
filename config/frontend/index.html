@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="id">
+<head><meta charset="utf-8"><title>Demo IaC</title></head>
+<body>
+  <h1>Demo Infrastructure as Code</h1>
+  <p>Status: <span id="status">memeriksa...</span></p>
+  <script>
+    fetch('/api/health').then(r => r.json())
+      .then(d => document.getElementById('status').textContent = d.status);
+  </script>
+</body>
+</html>
